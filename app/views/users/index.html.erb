@@ -1,0 +1,24 @@
+<h1 class="text-center">User Detail</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+      <% @user.each do |users| %>
+    <tr>
+      <th scope="row"><%= users.id %> </th>
+      <td><%= users.fname %></td>
+      <td><%= users.lname %></td>
+
+    </tr>
+     <% end %>
+  </tbody>
+</table>
+
+<%== pagy_nav(@pagy) %>
